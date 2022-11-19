@@ -1,0 +1,49 @@
+GET http://localhost:7799/api/auth
+
+###
+
+POST http://localhost:7799/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "24hdev",
+    "password": "123"
+}
+
+###
+POST http://localhost:7799/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "123"
+}
+
+###
+POST http://localhost:7799/api/posts/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mzc3MDdlYTJkY2FhOGQxNWYyYTExZmEiLCJpYXQiOjE2Njg3NjA0NTR9.FCchTCdo0lzzc5X0MCwh0jJEfrMyRnLGmX5KfWN9HM8
+
+{
+    "title": "Learn Morgan",
+    "description": "Framework for Nodejs",
+    "url": "morgan.com",
+    "status": "LEARNING"
+}
+
+###
+GET http://localhost:7799/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mzc3MDdlYTJkY2FhOGQxNWYyYTExZmEiLCJpYXQiOjE2Njg3NjA0NTR9.FCchTCdo0lzzc5X0MCwh0jJEfrMyRnLGmX5KfWN9HM8
+
+###
+PUT http://localhost:7799/api/posts/update/637743c2f1f5985c46ec1b89
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mzc3MDdlYTJkY2FhOGQxNWYyYTExZmEiLCJpYXQiOjE2Njg3NjQ0NDJ9.YyaUR8kuwogUIwA43wk1y5NDO1Yi3QlHGBvlZkPuBCU
+
+{
+    "title": "Learn Morgan updated",
+    "description": "Framework for Nodejs",
+    "url": "",
+    "status": "LEARNED"
+}
+
